@@ -1,0 +1,4 @@
+rootProject.name='Foundation'
+
+include ':Main'
+include ':JarModule'
