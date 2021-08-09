@@ -82,6 +82,7 @@ public class SystemUtil
     public static final String SNAPSHOTxPREFIX="TMPSNAPSHOT";
     public static final int BUILDxOSxVERSIONxM=23;
     public static final int BUILDxOSxVERSIONxL=21;
+    public static final int BUILDxOSxVERSIONxK=19;
     /** Intent添加这个标志后,该广播在应用被强制停止后.可以继续运作(Android3.1开始的版本使用.3.1之前不存在这问题) */
     public static final int FLAGxINCLUDExSTOPPEDxPACKAGES=32;
     private static final String TAG="SystemUtil";
@@ -772,6 +773,37 @@ public class SystemUtil
             ret=false;
         }
         return ret;
+    }
+    
+    public static boolean isSupportStatusBarTextModifyFlyme()
+    {
+        return Build.DISPLAY.contains("Flyme")&&(19<=VERSION.SDK_INT);
+    }
+    
+    /** 乐视手机.针对6.0以下 */
+    public static boolean isSupportStatusBarTextModifyLetv()
+    {
+        boolean result=false;
+        String androidVersion=VERSION.RELEASE;
+        String brand=Build.BRAND;
+        if(androidVersion==null||brand==null)
+        {
+            return result;
+        }
+        if("Letv".equalsIgnoreCase(brand))
+        {
+            result=true;
+        }
+        if(Build.MANUFACTURER!=null&&"Letv".equalsIgnoreCase(Build.MANUFACTURER))
+        {
+            result=true;
+        }
+        return result&&19<=VERSION.SDK_INT&&VERSION.SDK_INT<SystemUtil.BUILDxOSxVERSIONxM;
+    }
+    
+    public static boolean isFlymeAboveM()
+    {
+        return Build.DISPLAY.contains("Flyme")&&(23<=VERSION.SDK_INT);
     }
     
     static String getClipboardText(Context context)

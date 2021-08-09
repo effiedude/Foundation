@@ -1,0 +1,30 @@
+apply plugin: 'maven'
+
+uploadArchives
+{
+    configuration=configurations.archives
+    repositories
+    {
+        mavenDeployer
+        {
+            snapshotRepository(url:MAVENxREPOxSNAPSHOTxURL)
+            {
+                authentication(userName:NEXUSxUSERNAME,password:NEXUSxPASSWORD)
+            }
+
+            repository(url:MAVENxREPOxRELEASExURL)
+            {
+                authentication(userName:NEXUSxUSERNAME,password:NEXUSxPASSWORD)
+            }
+
+            pom.project
+            {
+                version '1.0.5'
+                artifactId 'Foundation'
+                groupId 'com.personedu.base'
+                packaging TYPE
+                description '架构包模板'
+            }
+        }
+    }
+}

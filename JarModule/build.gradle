@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-
-group 'com.townspriter.android.foundation'
-ext.artifactId='foundation'
+apply from:'tools.gradle'
 
 android
 {
@@ -13,7 +11,7 @@ android
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0.0.0"
+        versionName '1.0.1'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -36,9 +34,10 @@ android
 
 dependencies
 {
-    implementation fileTree(dir:"libs",include:["*.jar"])
+    //implementation fileTree(dir:"libs",include:["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.core:core:1.1.0'
+    implementation 'androidx.annotation:annotation:1.2.0'
     implementation 'com.google.code.gson:gson:2.8.6'
 
     testImplementation 'junit:junit:4.12'
@@ -51,8 +50,12 @@ task deleteOldJar(type:Delete) {delete 'food/Foundation.aar'}
 task exportJar(type:Copy){
     from('build/outputs/aar/')
     into('food/')
-    include('Foundation-release.aar')
-    rename('Foundation-release.aar','Foundation.aar')
+    include('JarModule-release.aar')
+    rename('JarModule-release.aar','Foundation.aar')
 }
 
 exportJar.dependsOn(deleteOldJar,build)
+
+
+
+

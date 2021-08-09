@@ -10,10 +10,16 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
+import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
+import android.widget.LinearLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /******************************************************************************
  * @Path Foundation:StatusBarUtils
@@ -33,18 +39,25 @@ public class StatusBarUtils
     private static boolean sEnableChangeStatusBarFontColor;
     private static boolean sHasCheckChangeStatusBarFontColor;
     
-    /**
+    /*********************************
+     * @function isSupportTransparentStatusBar
+     * @since JDK 1.7.0-79
+     * @describe 检测当前系统是否支持透明系统栏
+     * @param
+     * @exception
      * @return
-     * true 开启透明通知栏
-     * false 不开启透明通知栏
+     * boolean <code>true:支持 false:不支持</code>
+     * @date 2021-07-19 11:49:04
+     * @version 1.0.0.0
+     * ********************************
      */
-    public static boolean checkTransparentStatusBar(Context context)
+    public static boolean isSupportTransparentStatusBar(Context context)
     {
         if(sHasCheckTransparentStatusBar)
         {
             return sEnableTransparentStatusBar;
         }
-        if(VERSION.SDK_INT>=19)
+        if(VERSION.SDK_INT>=SystemUtil.BUILDxOSxVERSIONxK)
         {
             DisplayMetrics displayMetrics=context.getResources().getDisplayMetrics();
             int screenWidth=displayMetrics.widthPixels;
@@ -64,134 +77,99 @@ public class StatusBarUtils
         return sEnableTransparentStatusBar;
     }
     
-    public static boolean checkChangeStatusBarColorEnable()
+    public static boolean isSupportChangeStatusBarTextColor()
     {
         if(sHasCheckChangeStatusBarFontColor)
         {
             return sEnableChangeStatusBarFontColor;
         }
-        sEnableChangeStatusBarFontColor=isSupportModifyStatusBarTextColor();
+        sEnableChangeStatusBarFontColor=isSupportChangeStatusBarTextColorInner();
         sHasCheckChangeStatusBarFontColor=true;
         return sEnableChangeStatusBarFontColor;
     }
     
-    public static boolean isSupportModifyStatusBarTextColor()
-    {
-        return SystemUtil.isMiUIV6orAbove()||isSupportStatusBarTextModifyFlyme()||isSupportStatusBarTextModifyLetv();
-    }
-    
-    public static boolean isTransparentStatusBarEnable()
-    {
-        return true;
-    }
-    
-    public static boolean isChangeStatusBarFontColorEnable()
-    {
-        return sEnableChangeStatusBarFontColor||VERSION.SDK_INT>=SystemUtil.BUILDxOSxVERSIONxM;
-    }
-    
-    public static void setChangeStatusBarFontColorEnable(boolean statusBarFontColorEnable)
+    private static void setSupportChangeStatusBarTextColor(boolean statusBarFontColorEnable)
     {
         sEnableChangeStatusBarFontColor=statusBarFontColorEnable;
     }
     
-    private static void setDarkStatusIcon(Window window,boolean dark)
-    {
-        if(VERSION.SDK_INT>=SystemUtil.BUILDxOSxVERSIONxM)
-        {
-            if(null!=window)
-            {
-                View decorView=window.getDecorView();
-                if(decorView!=null)
-                {
-                    int vis=decorView.getSystemUiVisibility();
-                    if(dark)
-                    {
-                        vis|=SYSTEMxUIxFLAGxLIGHTxSTATUSxBAR;
-                    }
-                    else
-                    {
-                        vis&=~SYSTEMxUIxFLAGxLIGHTxSTATUSxBAR;
-                    }
-                    decorView.setSystemUiVisibility(vis);
-                }
-            }
-        }
-    }
-    
-    public static void setStatusColor(Window window,int color)
-    {
-        if(VERSION.SDK_INT>=SystemUtil.BUILDxOSxVERSIONxL)
-        {
-            if(null!=window)
-            {
-                ReflectionHelper.invokeMethod(window,"setStatusBarColor",new Class[]{int.class},new Object[]{color});
-            }
-        }
-    }
-    
-    /**
-     * 对于大部分安卓的系统.用谷歌的方法去修改状态栏图标的颜色
-     * 小米等用他们自家的公布的方法
-     */
-    public static void updateStatusTextColor(Activity activity,boolean light)
+    public static void updateColorStatusBar(@NonNull Activity activity,boolean dark,int color)
     {
         if(activity==null)
         {
             return;
         }
-        updateStatusTextColor(activity.getWindow(),light);
-    }
-    
-    /**
-     * 对于大部分安卓的系统.用谷歌的方法去修改状态栏图标的颜色
-     * 小米等用他们自家的公布的方法
-     */
-    public static void updateStatusTextColor(Window window,boolean light)
-    {
-        if(!isTransparentStatusBarEnable())
-        {
-            return;
-        }
-        if(window==null)
-        {
-            return;
-        }
         if(isStandardStatusBarAboveM())
         {
-            setDarkStatusIcon(window,!light);
-            setStatusColor(window,Color.TRANSPARENT);
+            setDarkStatusIcon(activity.getWindow(),dark);
+            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            activity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            activity.getWindow().setStatusBarColor(color);
+            activity.getWindow().setNavigationBarColor(color);
         }
         else
         {
             boolean success=false;
             if(SystemUtil.isMiUIV6orAbove())
             {
-                success=setMiUIV6StatusBarTextColor(window,!light);
+                success=setMiUIV6StatusBarTextColor(activity.getWindow(),dark);
             }
-            else if(isSupportStatusBarTextModifyFlyme())
+            else if(SystemUtil.isSupportStatusBarTextModifyFlyme())
             {
-                success=setMeiZuStatusBarTextColor(window,!light);
+                success=setMeiZuStatusBarTextColor(activity.getWindow(),dark);
             }
-            else if(isSupportStatusBarTextModifyLetv())
+            else if(SystemUtil.isSupportStatusBarTextModifyLetv())
             {
-                success=setLeShiStatusBarTextColor(window,!light);
+                success=setLeShiStatusBarTextColor(activity.getWindow(),dark);
+            }
+            else if(Build.VERSION.SDK_INT>=SystemUtil.BUILDxOSxVERSIONxK)
+            {
+                activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                ViewGroup decorView=(ViewGroup)activity.getWindow().getDecorView();
+                int count=decorView.getChildCount();
+                if(count>0&&decorView.getChildAt(count-1) instanceof StatusBarView)
+                {
+                    decorView.getChildAt(count-1).setBackgroundColor(color);
+                }
+                else
+                {
+                    StatusBarView statusView=createStatusBarView(activity,color);
+                    decorView.addView(statusView);
+                }
+                ViewGroup rootView=(ViewGroup)((ViewGroup)activity.findViewById(android.R.id.content)).getChildAt(0);
+                rootView.setFitsSystemWindows(true);
+                rootView.setClipToPadding(true);
+                success=true;
             }
             if(!success)
             {
-                setChangeStatusBarFontColorEnable(false);
+                setSupportChangeStatusBarTextColor(false);
             }
         }
     }
     
+    /**
+     * 对于大部分安卓的系统.用谷歌的方法去修改状态栏图标的颜色
+     * 小米等用他们自家的公布的方法
+     */
+    @Deprecated
+    public static void updateTransparentStatusBar(@NonNull Activity activity,boolean dark)
+    {
+        if(activity==null)
+        {
+            return;
+        }
+        updateTransparentStatusBarInner(activity,dark);
+    }
+    
     @TargetApi(VERSION_CODES.KITKAT)
-    public static void configTransparentStatusBar(Window window)
+    public static void configTransparentStatusBar(@NonNull Window window)
     {
         if(window==null)
         {
             return;
         }
-        if(VERSION.SDK_INT<SystemUtil.BUILDxOSxVERSIONxM ||SystemUtil.isMiUIV7OrAbove()||isFlymeAboveM())
+        if(VERSION.SDK_INT<SystemUtil.BUILDxOSxVERSIONxM||SystemUtil.isMiUIV7OrAbove()||SystemUtil.isFlymeAboveM())
         {
             window.setFlags(LayoutParams.FLAG_TRANSLUCENT_STATUS,LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
@@ -204,25 +182,20 @@ public class StatusBarUtils
     }
     
     @TargetApi(VERSION_CODES.KITKAT)
-    public static void configTransparentStatusBar(LayoutParams lp)
+    public static void configTransparentStatusBar(LayoutParams layoutParams)
     {
-        if(lp!=null)
+        if(layoutParams!=null)
         {
             int flags=LayoutParams.FLAG_TRANSLUCENT_STATUS;
             int mask=LayoutParams.FLAG_TRANSLUCENT_STATUS;
-            lp.flags=(lp.flags&~mask)|(flags&mask);
+            layoutParams.flags=(layoutParams.flags&~mask)|(flags&mask);
         }
     }
     
-    /** 是否支持原生的标准状态栏 */
-    private static boolean isStandardStatusBarAboveM()
+    @TargetApi(VERSION_CODES.KITKAT)
+    public static void addStatusBarPaddingIfUsingTransparentStatusBar(@NonNull View contentView,@NonNull Context context)
     {
-        return VERSION.SDK_INT>=SystemUtil.BUILDxOSxVERSIONxM &&!SystemUtil.isMiUIV6orAbove()&&!isSupportStatusBarTextModifyFlyme()&&!isSupportStatusBarTextModifyLetv();
-    }
-    
-    public static void addStatusBarPaddingIfUsingTransparentStatusBar(View contentView,Context context)
-    {
-        if(isTransparentStatusBarEnable()&&contentView!=null&&context!=null)
+        if(isSupportTransparentStatusBarInner()&&contentView!=null&&context!=null)
         {
             int statusBarHeight=SystemUtil.getStatusBarHeight(context);
             if(contentView.getPaddingTop()!=statusBarHeight)
@@ -232,16 +205,77 @@ public class StatusBarUtils
         }
     }
     
-    public static void removeStatusBarPaddingIfUsingTransparentStatusBar(View view)
+    @TargetApi(VERSION_CODES.KITKAT)
+    public static void removeStatusBarPaddingIfUsingTransparentStatusBar(@NonNull View view)
     {
-        if(isTransparentStatusBarEnable()&&view!=null&&view.getPaddingTop()!=0)
+        if(isSupportTransparentStatusBarInner()&&view!=null&&view.getPaddingTop()!=0)
         {
             view.setPadding(view.getPaddingLeft(),0,view.getPaddingRight(),view.getPaddingBottom());
         }
     }
     
+    /**
+     * 对于大部分安卓的系统.用谷歌的方法去修改状态栏图标的颜色
+     * 如果是小米手机等厂商则使用他们自家的公布的方法
+     */
+    private static void updateTransparentStatusBarInner(@NonNull Activity activity,boolean dark)
+    {
+        if(!isSupportTransparentStatusBarInner())
+        {
+            return;
+        }
+        if(activity.getWindow()==null)
+        {
+            return;
+        }
+        if(isStandardStatusBarAboveM())
+        {
+            setDarkStatusIcon(activity.getWindow(),dark);
+            setStatusBarColor(activity.getWindow(),Color.TRANSPARENT);
+        }
+        else
+        {
+            boolean success=false;
+            if(SystemUtil.isMiUIV6orAbove())
+            {
+                success=setMiUIV6StatusBarTextColor(activity.getWindow(),dark);
+            }
+            else if(SystemUtil.isSupportStatusBarTextModifyFlyme())
+            {
+                success=setMeiZuStatusBarTextColor(activity.getWindow(),dark);
+            }
+            else if(SystemUtil.isSupportStatusBarTextModifyLetv())
+            {
+                success=setLeShiStatusBarTextColor(activity.getWindow(),dark);
+            }
+            else if(Build.VERSION.SDK_INT>=SystemUtil.BUILDxOSxVERSIONxK)
+            {
+                activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                ViewGroup decorView=(ViewGroup)activity.getWindow().getDecorView();
+                int count=decorView.getChildCount();
+                if(count>0&&decorView.getChildAt(count-1) instanceof StatusBarView)
+                {
+                    decorView.getChildAt(count-1).setBackgroundColor(Color.TRANSPARENT);
+                }
+                else
+                {
+                    StatusBarView statusView=createStatusBarView(activity,Color.TRANSPARENT);
+                    decorView.addView(statusView);
+                }
+                ViewGroup rootView=(ViewGroup)((ViewGroup)activity.findViewById(android.R.id.content)).getChildAt(0);
+                rootView.setFitsSystemWindows(true);
+                rootView.setClipToPadding(true);
+                success=true;
+            }
+            if(!success)
+            {
+                setSupportChangeStatusBarTextColor(false);
+            }
+        }
+    }
+    
     /** 修改魅族状态栏文字色 */
-    public static boolean setMeiZuStatusBarTextColor(Window window,boolean dark)
+    private static boolean setMeiZuStatusBarTextColor(Window window,boolean dark)
     {
         boolean result=false;
         if(window!=null)
@@ -275,10 +309,8 @@ public class StatusBarUtils
         return result;
     }
     
-    /**
-     * 修改小米状态栏文字色
-     */
-    public static boolean setMiUIV6StatusBarTextColor(Window window,boolean dark)
+    /** 修改小米状态栏文字色 */
+    private static boolean setMiUIV6StatusBarTextColor(Window window,boolean dark)
     {
         boolean result=false;
         if(!SystemUtil.isMiUIV6orAbove())
@@ -316,7 +348,7 @@ public class StatusBarUtils
     }
     
     /** 修改乐视状态栏文字色 */
-    public static boolean setLeShiStatusBarTextColor(Window window,boolean dark)
+    private static boolean setLeShiStatusBarTextColor(Window window,boolean dark)
     {
         boolean result=false;
         if(window!=null)
@@ -343,34 +375,87 @@ public class StatusBarUtils
         return result;
     }
     
-    public static boolean isSupportStatusBarTextModifyFlyme()
+    private static boolean isSupportTransparentStatusBarInner()
     {
-        return Build.DISPLAY.contains("Flyme")&&(19<=VERSION.SDK_INT);
+        return true;
     }
     
-    /** 乐视手机.针对6.0以下 */
-    public static boolean isSupportStatusBarTextModifyLetv()
+    private static boolean isSupportChangeStatusBarTextColorInner()
     {
-        boolean result=false;
-        String androidVersion=VERSION.RELEASE;
-        String brand=Build.BRAND;
-        if(androidVersion==null||brand==null)
-        {
-            return result;
-        }
-        if("Letv".equalsIgnoreCase(brand))
-        {
-            result=true;
-        }
-        if(Build.MANUFACTURER!=null&&"Letv".equalsIgnoreCase(Build.MANUFACTURER))
-        {
-            result=true;
-        }
-        return result&&19<=VERSION.SDK_INT&&VERSION.SDK_INT<SystemUtil.BUILDxOSxVERSIONxM;
+        return sEnableChangeStatusBarFontColor||VERSION.SDK_INT>=SystemUtil.BUILDxOSxVERSIONxM||SystemUtil.isMiUIV6orAbove()||SystemUtil.isSupportStatusBarTextModifyFlyme()||SystemUtil.isSupportStatusBarTextModifyLetv();
     }
     
-    public static boolean isFlymeAboveM()
+    private static void setStatusBarColor(Window window,int color)
     {
-        return Build.DISPLAY.contains("Flyme")&&(23<=VERSION.SDK_INT);
+        if(VERSION.SDK_INT>=SystemUtil.BUILDxOSxVERSIONxL)
+        {
+            if(null!=window)
+            {
+                ReflectionHelper.invokeMethod(window,"setStatusBarColor",new Class[]{int.class},new Object[]{color});
+            }
+        }
+    }
+    
+    private static void setDarkStatusIcon(Window window,boolean dark)
+    {
+        if(VERSION.SDK_INT>=SystemUtil.BUILDxOSxVERSIONxM)
+        {
+            if(null!=window)
+            {
+                View decorView=window.getDecorView();
+                if(decorView!=null)
+                {
+                    int visibilityFlag=decorView.getSystemUiVisibility();
+                    if(dark)
+                    {
+                        visibilityFlag|=SYSTEMxUIxFLAGxLIGHTxSTATUSxBAR;
+                    }
+                    else
+                    {
+                        visibilityFlag&=~SYSTEMxUIxFLAGxLIGHTxSTATUSxBAR;
+                    }
+                    decorView.setSystemUiVisibility(visibilityFlag);
+                }
+            }
+        }
+    }
+    
+    /** 是否支持原生的标准状态栏 */
+    private static boolean isStandardStatusBarAboveM()
+    {
+        return VERSION.SDK_INT>=SystemUtil.BUILDxOSxVERSIONxM&&!SystemUtil.isMiUIV6orAbove()&&!SystemUtil.isSupportStatusBarTextModifyFlyme()&&!SystemUtil.isSupportStatusBarTextModifyLetv();
+    }
+    
+    private static StatusBarView createStatusBarView(Activity activity,int color)
+    {
+        // 绘制一个和状态栏一样高的矩形
+        StatusBarView statusBarView=new StatusBarView(activity);
+        LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,SystemUtil.getStatusBarHeight(activity));
+        statusBarView.setLayoutParams(params);
+        statusBarView.setBackgroundColor(color);
+        return statusBarView;
+    }
+    
+    private static class StatusBarView extends View
+    {
+        public StatusBarView(Context context)
+        {
+            super(context);
+        }
+        
+        public StatusBarView(Context context,@Nullable AttributeSet attrs)
+        {
+            super(context,attrs);
+        }
+        
+        public StatusBarView(Context context,@Nullable AttributeSet attrs,int defStyleAttr)
+        {
+            super(context,attrs,defStyleAttr);
+        }
+        
+        public StatusBarView(Context context,@Nullable AttributeSet attrs,int defStyleAttr,int defStyleRes)
+        {
+            super(context,attrs,defStyleAttr,defStyleRes);
+        }
     }
 }

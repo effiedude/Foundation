@@ -73,7 +73,7 @@ public final class FileUtils
     
     public static void openFileManagerFromActivity(@NonNull Activity activity,@NonNull String mime,@IntRange(from=0) int requestCode)
     {
-        Intent intent=new Intent(Intent.ACTION_GET_CONTENT);
+        Intent intent=new Intent(Intent.ACTION_OPEN_DOCUMENT);
         /** 设置类型 */
         intent.setType(mime);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
@@ -82,7 +82,7 @@ public final class FileUtils
     
     public static void openFileManagerFromFragment(@NonNull Fragment fragment,@NonNull String mime,@IntRange(from=0) int requestCode)
     {
-        Intent intent=new Intent(Intent.ACTION_GET_CONTENT);
+        Intent intent=new Intent(Intent.ACTION_OPEN_DOCUMENT);
         /** 设置类型 */
         intent.setType(mime);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
