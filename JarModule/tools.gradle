@@ -19,7 +19,7 @@ uploadArchives
 
             pom.project
             {
-                version '1.0.5'
+                version '1.0.6'
                 artifactId 'Foundation'
                 groupId 'com.personedu.base'
                 packaging TYPE
