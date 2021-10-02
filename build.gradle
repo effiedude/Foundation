@@ -20,11 +20,7 @@ allprojects
         maven
         {
             url'https://jitpack.io'
-            credentials{ username 'jp_u7ldms3flpl5les7u4r4315ov3'}
-        }
-        maven
-        {
-            url 'http://10.58.220.5:8081/repository/maven-releases/'
+            credentials{ username 'jp_b2cil2rd2h5fqhju9tfostnc3n'}
         }
     }
 }

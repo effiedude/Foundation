@@ -19,9 +19,9 @@ uploadArchives
 
             pom.project
             {
-                version '1.0.6'
+                version '1.0.2'
                 artifactId 'Foundation'
-                groupId 'com.personedu.base'
+                groupId 'com.townspriter.base'
                 packaging TYPE
                 description '架构包模板'
             }
