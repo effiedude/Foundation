@@ -5,6 +5,7 @@ buildscript
         google()
         jcenter()
     }
+
     dependencies
     {
         classpath "com.android.tools.build:gradle:4.0.1"
@@ -17,11 +18,7 @@ allprojects
     {
         google()
         jcenter()
-        maven
-        {
-            url'https://jitpack.io'
-            credentials{ username 'jp_b2cil2rd2h5fqhju9tfostnc3n'}
-        }
+        maven {url 'https://jitpack.io'}
     }
 }
 
