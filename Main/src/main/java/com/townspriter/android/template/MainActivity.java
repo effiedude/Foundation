@@ -1,10 +1,11 @@
 package com.townspriter.android.template;
 
+import com.townspriter.base.foundation.utils.log.Logger;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 /******************************************************************************
- * @path AndroidTemplate:MainActivity
+ * @path Foundation:MainActivity
  * @version 1.0.0.0
  * @describe 主类
  * @author 张飞
@@ -27,7 +28,9 @@ public class MainActivity extends AppCompatActivity
     }
     
     private void initData()
-    {}
+    {
+        Logger.d(TAG,"initData");
+    }
     
     private void initView()
     {}

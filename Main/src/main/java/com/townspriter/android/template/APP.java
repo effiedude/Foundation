@@ -1,12 +1,12 @@
 package com.townspriter.android.template;
 
-import com.townspriter.android.foundation.Foundation;
-import com.townspriter.android.foundation.utils.log.LogImpl;
-import com.townspriter.android.foundation.utils.log.Logger;
+import com.townspriter.base.foundation.Foundation;
+import com.townspriter.base.foundation.utils.log.LogImpl;
+import com.townspriter.base.foundation.utils.log.Logger;
 import android.app.Application;
 
 /******************************************************************************
- * @path AndroidTemplate:APP
+ * @path Foundation:APP
  * @version 1.0.0.0
  * @describe 程序入口
  * @author 张飞
@@ -17,7 +17,7 @@ import android.app.Application;
  */
 public class APP extends Application
 {
-    private static final String APPxTAG="APP";
+    private static final String APPxTAG="Foundation-";
     
     @Override
     public void onCreate()

@@ -19,11 +19,11 @@ uploadArchives
 
             pom.project
             {
-                version '1.0.2'
+                version '1.0.0'
                 artifactId 'Foundation'
                 groupId 'com.townspriter.base'
                 packaging TYPE
-                description '架构包模板'
+                description '脚手架'
             }
         }
     }

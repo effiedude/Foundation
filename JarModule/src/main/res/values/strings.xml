@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="timeJustNow">刚刚</string>
-    <string name="timeMinutes">分钟前</string>
-    <string name="timeHours">小时前</string>
-    <string name="timeDays">天前</string>
+    <string name="foundationTimeJustNow">刚刚</string>
+    <string name="foundationTimeMinutes">分钟前</string>
+    <string name="foundationTimeHours">小时前</string>
+    <string name="foundationTimeDays">天前</string>
 
 </resources>

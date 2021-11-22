@@ -3,7 +3,7 @@ package com.townspriter.android.template.test;
 import androidx.fragment.app.Fragment;
 
 /******************************************************************************
- * @path AndroidTemplate:TestFragment
+ * @path Foundation:TestFragment
  * @version 1.0.0.0
  * @describe 程序入口
  * @author 张飞
