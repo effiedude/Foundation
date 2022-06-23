@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:StringUtil
+ * @path StringUtil
  * @version 1.0.0.0
  * @describe 字符串的工具类
  * @author 张飞

@@ -12,7 +12,7 @@ import com.townspriter.base.foundation.utils.io.IOUtil;
 import com.townspriter.base.foundation.utils.text.StringUtil;
 
 /******************************************************************************
- * @path Foundation:DigestUtil
+ * @path DigestUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

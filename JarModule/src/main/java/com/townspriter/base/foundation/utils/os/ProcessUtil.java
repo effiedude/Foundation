@@ -15,7 +15,7 @@ import android.content.Context;
 import android.text.TextUtils;
 
 /******************************************************************************
- * @path Foundation:ProcessUtil
+ * @path ProcessUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

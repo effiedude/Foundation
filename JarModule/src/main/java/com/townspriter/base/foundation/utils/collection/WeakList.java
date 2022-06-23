@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /******************************************************************************
- * @path Foundation:WeakList
+ * @path WeakList
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

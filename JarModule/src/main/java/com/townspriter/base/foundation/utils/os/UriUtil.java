@@ -3,7 +3,6 @@ package com.townspriter.base.foundation.utils.os;
 import java.io.InputStream;
 import com.townspriter.base.foundation.Foundation;
 import com.townspriter.base.foundation.utils.io.IOUtil;
-
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,7 +10,7 @@ import android.net.Uri;
 import android.provider.MediaStore.Images.Media;
 
 /******************************************************************************
- * @path Foundation:UriUtil
+ * @path UriUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

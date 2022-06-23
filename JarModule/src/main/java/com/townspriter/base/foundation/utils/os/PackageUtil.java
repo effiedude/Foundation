@@ -21,7 +21,7 @@ import android.net.Uri;
 import android.os.Environment;
 
 /******************************************************************************
- * @path Foundation:PackageUtil
+ * @path PackageUtil
  * @describe 统一处理判断包是否安装的逻辑.减少获取包信息的IPC调用次数.提升性能
  * @author 张飞
  * @email zhangfei@townspriter.com

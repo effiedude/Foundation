@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.net;
 /******************************************************************************
- * @path Foundation:NetworkState
+ * @path NetworkState
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

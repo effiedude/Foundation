@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.lang;
 /******************************************************************************
- * @path Foundation:Boxing
+ * @path Boxing
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

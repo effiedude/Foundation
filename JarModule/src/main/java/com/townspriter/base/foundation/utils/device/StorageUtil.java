@@ -19,7 +19,7 @@ import android.os.StatFs;
 import android.text.TextUtils;
 
 /******************************************************************************
- * @path Foundation:StorageUtil
+ * @path StorageUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com
@@ -41,10 +41,10 @@ public class StorageUtil
     
     private StorageUtil()
     {
-        mListStorageAll=new ArrayList<String>();
-        mListStorageAvaliable=new ArrayList<String>();
-        mListStorageExternal=new ArrayList<String>();
-        mListStorageInternal=new ArrayList<String>();
+        mListStorageAll=new ArrayList<>();
+        mListStorageAvaliable=new ArrayList<>();
+        mListStorageExternal=new ArrayList<>();
+        mListStorageInternal=new ArrayList<>();
         mStoragePrimary="";
         getSysStorage();
     }

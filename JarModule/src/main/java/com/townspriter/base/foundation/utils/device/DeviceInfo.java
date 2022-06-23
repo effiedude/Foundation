@@ -9,7 +9,7 @@ import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 
 /******************************************************************************
- * @path Foundation:DeviceInfo
+ * @path DeviceInfo
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

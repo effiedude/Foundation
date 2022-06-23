@@ -10,13 +10,12 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import com.townspriter.base.foundation.Foundation;
 import com.townspriter.base.foundation.utils.log.Logger;
-
 import android.content.res.AssetManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:AssetsUtils
+ * @path AssetsUtils
  * @version 1.0.0.0
  * @describe
  * @author 张飞

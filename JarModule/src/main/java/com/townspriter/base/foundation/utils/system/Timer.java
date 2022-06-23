@@ -7,7 +7,7 @@ import android.os.Looper;
 import android.os.Message;
 
 /******************************************************************************
- * @path Foundation:Timer
+ * @path Timer
  * @describe 定时器
  * @author 张飞
  * @email zhangfei@townspriter.com

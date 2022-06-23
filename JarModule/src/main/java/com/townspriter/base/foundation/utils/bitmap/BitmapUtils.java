@@ -24,7 +24,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:BitmapUtils
+ * @path BitmapUtils
  * @version 1.0.0.0
  * @describe
  * @author 张飞

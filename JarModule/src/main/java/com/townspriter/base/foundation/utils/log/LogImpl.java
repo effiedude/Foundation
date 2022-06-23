@@ -4,18 +4,18 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 /******************************************************************************
- * @path Foundation:LogImpl
+ * @path LogImpl
  * @version 1.0.0.0
  * @describe 日志打印代理
  * @author 张飞
- * @email zhangfei@personedu.com
+ * @email zhangfei@townspriter.com
  * @date 2021-05-30 16:53:10
  * CopyRight(C)2021 小镇精灵工作室版权所有
  * *****************************************************************************
  */
 public class LogImpl implements ILogger
 {
-    private String mAppTag;
+    private final String mAppTag;
     
     public LogImpl(@NonNull String appTag)
     {

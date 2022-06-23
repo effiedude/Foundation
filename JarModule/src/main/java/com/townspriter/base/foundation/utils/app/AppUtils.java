@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:AppUtils
+ * @path AppUtils
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

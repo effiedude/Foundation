@@ -5,7 +5,7 @@ import android.content.Context;
 import android.os.Build.VERSION;
 
 /******************************************************************************
- * @path Foundation:NotificationUtils
+ * @path NotificationUtils
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

@@ -12,7 +12,7 @@ import android.graphics.Typeface;
 import android.os.Build;
 
 /******************************************************************************
- * @path Foundation:FontsOverride
+ * @path FontsOverride
  * @version 1.0.0.0
  * @describe 通过反射替换所有系统字体为自定义的字体.替换完毕后需要重新设置字体样式为任意字体类型才能生效.方案来自反解的澎湃新闻
  * @author 张飞

@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.permission;
 /******************************************************************************
- * @path Foundation:AbstractPermissionInjectAdapter
+ * @path AbstractPermissionInjectAdapter
  * @version 1.0.0.0
  * @describe
  * @author 张飞

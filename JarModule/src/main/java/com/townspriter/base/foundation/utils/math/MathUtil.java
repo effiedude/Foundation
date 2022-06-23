@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.math;
 /******************************************************************************
- * @path Foundation:MathUtil
+ * @path MathUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /******************************************************************************
- * @path Foundation:ListUtil
+ * @path ListUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

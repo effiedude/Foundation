@@ -3,7 +3,7 @@ package com.townspriter.base.foundation.utils.collection;
 import com.townspriter.base.foundation.utils.collection.LinkedPool.ILinkedPoolable;
 
 /******************************************************************************
- * @path Foundation:LinkedPool
+ * @path LinkedPool
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 
 /******************************************************************************
- * @path Foundation:ISystemInfo
+ * @path ISystemInfo
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

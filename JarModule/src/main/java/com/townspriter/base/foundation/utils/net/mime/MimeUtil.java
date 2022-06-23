@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:MimeUtil
+ * @path MimeUtil
  * @version 1.0.0.0
  * @describe
  * @author 张飞
@@ -35,29 +35,29 @@ public class MimeUtil
     public static final String MIMExTYPExMP4="video/mp4";
     public static final String MIMExTYPExQUICKxTIME="video/quicktime";
     public static final String MIMExTYPExASF="video/x-ms-asf";
-    public static final String MIMETYPExWMV="video/x-ms-wmv";
-    public static final String MIMETYPExAVI="video/x-msvideo";
-    public static final String MIMETYPEx3GP="video/3gpp";
-    public static final String MIMETYPExMOIVE="video/x-sgi-movie";
-    public static final String MIMETYPExTEXT="text/plain";
-    public static final String MIMETYPExAUDIO="audio/mpeg";
+    public static final String MIMExTYPExWMV="video/x-ms-wmv";
+    public static final String MIMExTYPExAVI="video/x-msvideo";
+    public static final String MIMExTYPEx3GP="video/3gpp";
+    public static final String MIMExTYPExMOIVE="video/x-sgi-movie";
+    public static final String MIMExTYPExTEXT="text/plain";
+    public static final String MIMExTYPExAUDIO="audio/mpeg";
     public static final String MIMExTYPExWMA="audio/x-ms-wma";
-    public static final String MIMExTYPExREALAUDIO="audio/x-pn-realaudio";
+    public static final String MIMExTYPExREALxAUDIO="audio/x-pn-realaudio";
     public static final String MIMExTYPExWAV="audio/x-wav";
-    public static final String MIMETYPExMIDI="audio/midi";
-    public static final String MIMETYPExM3U8="application/vnd.apple.mpegurl";
-    public static final String MIMETYPExM3U82="application/x-mpegurl";
-    public static final String MIMETYPExFLV="video/x-flv";
-    public static final String MIMETYPExRMVB="video/vnd.rn-realvideo";
-    public static final String MIMETYPEx3GP2="video/3gpp2";
-    public static final String MIMETYPExM4V="video/x-m4v";
-    public static final String MIMETYPExH264="video/h264";
-    public static final String MIMETYPExH263="video/h263";
-    public static final String MIMETYPExTS="video/MP2T";
-    public static final String MIMETYPExMKV="video/x-matroska";
-    public static final String MIMETYPExXVID="video/x-xvid";
-    public static final String MIMETYPExVP6="video/x-vp6";
-    public static final String MIMETYPExTP="video/tp";
+    public static final String MIMExTYPExMIDI="audio/midi";
+    public static final String MIMExTYPExM3U8="application/vnd.apple.mpegurl";
+    public static final String MIMExTYPExM3U82="application/x-mpegurl";
+    public static final String MIMExTYPExFLV="video/x-flv";
+    public static final String MIMExTYPExRMVB="video/vnd.rn-realvideo";
+    public static final String MIMExTYPEx3GP2="video/3gpp2";
+    public static final String MIMExTYPExM4V="video/x-m4v";
+    public static final String MIMExTYPExH264="video/h264";
+    public static final String MIMExTYPExH263="video/h263";
+    public static final String MIMExTYPExTS="video/MP2T";
+    public static final String MIMExTYPExMKV="video/x-matroska";
+    public static final String MIMExTYPExXVID="video/x-xvid";
+    public static final String MIMExTYPExVP6="video/x-vp6";
+    public static final String MIMExTYPExTP="video/tp";
     public static final String MIMExTYPExGIF="image/gif";
     public static final String MIMExTYPExF4V="video/x-f4v";
     public static final String MIMExTYPExDOC="application/msword";
@@ -69,7 +69,7 @@ public class MimeUtil
     public static final String MIMExTYPExPPTX="application/vnd.openxmlformats-officedocument.presentationml.presentation";
     public static final HashSet<String> VIDEOxEXTENSIONS=new HashSet<>(64);
     private static final MimeUtil mInstance=new MimeUtil();
-    private static final List<String> SYSTEMxNORMALxSUPPORTEDxVIDEOxTYPE=new ArrayList<>(Arrays.asList(MIMExTYPExMPEG,MIMExTYPExMP4,MIMExTYPExQUICKxTIME,MIMExTYPExASF,MIMETYPExWMV,MIMETYPExAVI,MIMETYPEx3GP,MIMETYPExMOIVE));
+    private static final List<String> SYSTEMxNORMALxSUPPORTEDxVIDEOxTYPE=new ArrayList<>(Arrays.asList(MIMExTYPExMPEG,MIMExTYPExMP4,MIMExTYPExQUICKxTIME,MIMExTYPExASF,MIMExTYPExWMV,MIMExTYPExAVI,MIMExTYPEx3GP,MIMExTYPExMOIVE));
     static
     {
         VIDEOxEXTENSIONS.add("m1v");
@@ -132,7 +132,7 @@ public class MimeUtil
         loadEntry(MIMExTYPExUCW,"ucw");
         loadEntry(MIMExTYPExLANG,"ucl");
         loadEntry(MIMExTYPExUPP,"upp");
-        loadEntry(MIMETYPExFLV,"flv");
+        loadEntry(MIMExTYPExFLV,"flv");
         loadEntry("application/x-shockwave-flash","swf");
         loadEntry("text/vnd.sun.j2me.app-descriptor","jad");
         loadEntry("aplication/java-archive","jar");
@@ -151,15 +151,15 @@ public class MimeUtil
         loadEntry("text/h323","323");
         loadEntry("text/iuls","uls");
         loadEntry("text/mathml","mml");
-        loadEntry(MIMETYPExTEXT,"txt");
-        loadEntry(MIMETYPExTEXT,"ini");
-        loadEntry(MIMETYPExTEXT,"asc");
-        loadEntry(MIMETYPExTEXT,"text");
-        loadEntry(MIMETYPExTEXT,"diff");
-        loadEntry(MIMETYPExTEXT,"log");
-        loadEntry(MIMETYPExTEXT,"ini");
-        loadEntry(MIMETYPExTEXT,"log");
-        loadEntry(MIMETYPExTEXT,"pot");
+        loadEntry(MIMExTYPExTEXT,"txt");
+        loadEntry(MIMExTYPExTEXT,"ini");
+        loadEntry(MIMExTYPExTEXT,"asc");
+        loadEntry(MIMExTYPExTEXT,"text");
+        loadEntry(MIMExTYPExTEXT,"diff");
+        loadEntry(MIMExTYPExTEXT,"log");
+        loadEntry(MIMExTYPExTEXT,"ini");
+        loadEntry(MIMExTYPExTEXT,"log");
+        loadEntry(MIMExTYPExTEXT,"pot");
         loadEntry("application/umd","umd");
         loadEntry("text/xml","xml");
         loadEntry("text/html","html");
@@ -344,15 +344,15 @@ public class MimeUtil
         loadEntry("application/x-xfig","fig");
         loadEntry("application/epub","epub");
         loadEntry("audio/basic","snd");
-        loadEntry(MIMETYPExMIDI,"mid");
-        loadEntry(MIMETYPExMIDI,"midi");
-        loadEntry(MIMETYPExMIDI,"kar");
-        loadEntry(MIMETYPExAUDIO,"mpga");
-        loadEntry(MIMETYPExAUDIO,"mpega");
-        loadEntry(MIMETYPExAUDIO,"mp2");
-        loadEntry(MIMETYPExAUDIO,"mp3");
-        loadEntry(MIMETYPExAUDIO,"apu");// 国际版独有
-        loadEntry(MIMETYPExAUDIO,"m4a");
+        loadEntry(MIMExTYPExMIDI,"mid");
+        loadEntry(MIMExTYPExMIDI,"midi");
+        loadEntry(MIMExTYPExMIDI,"kar");
+        loadEntry(MIMExTYPExAUDIO,"mpga");
+        loadEntry(MIMExTYPExAUDIO,"mpega");
+        loadEntry(MIMExTYPExAUDIO,"mp2");
+        loadEntry(MIMExTYPExAUDIO,"mp3");
+        loadEntry(MIMExTYPExAUDIO,"apu");
+        loadEntry(MIMExTYPExAUDIO,"m4a");
         loadEntry("audio/mpegurl","m3u");
         loadEntry("audio/prs.sid","sid");
         loadEntry("audio/x-aiff","aif");
@@ -363,9 +363,9 @@ public class MimeUtil
         loadEntry(MIMExTYPExWMA,"wma");
         loadEntry("audio/x-ms-wax","wax");
         loadEntry("audio/AMR","amr");
-        loadEntry(MIMExTYPExREALAUDIO,"ra");
-        loadEntry(MIMExTYPExREALAUDIO,"rm");
-        loadEntry(MIMExTYPExREALAUDIO,"ram");
+        loadEntry(MIMExTYPExREALxAUDIO,"ra");
+        loadEntry(MIMExTYPExREALxAUDIO,"rm");
+        loadEntry(MIMExTYPExREALxAUDIO,"ram");
         loadEntry("audio/x-realaudio","ra");
         loadEntry("audio/x-scpls","pls");
         loadEntry("audio/x-sd2","sd2");
@@ -417,12 +417,12 @@ public class MimeUtil
         loadEntry("text/h323","323");
         loadEntry("text/iuls","uls");
         loadEntry("text/mathml","mml");
-        loadEntry(MIMETYPExTEXT,"txt");
-        loadEntry(MIMETYPExTEXT,"asc");
-        loadEntry(MIMETYPExTEXT,"text");
-        loadEntry(MIMETYPExTEXT,"diff");
-        loadEntry(MIMETYPExTEXT,"pot");
-        loadEntry(MIMETYPExTEXT,"umd");
+        loadEntry(MIMExTYPExTEXT,"txt");
+        loadEntry(MIMExTYPExTEXT,"asc");
+        loadEntry(MIMExTYPExTEXT,"text");
+        loadEntry(MIMExTYPExTEXT,"diff");
+        loadEntry(MIMExTYPExTEXT,"pot");
+        loadEntry(MIMExTYPExTEXT,"umd");
         loadEntry("text/richtext","rtx");
         loadEntry("text/rtf","rtf");
         loadEntry("text/texmacs","ts");
@@ -457,8 +457,8 @@ public class MimeUtil
         loadEntry("text/x-tex","cls");
         loadEntry("text/x-vcalendar","vcs");
         loadEntry("text/x-vcard","vcf");
-        loadEntry(MIMETYPEx3GP,"3gp");
-        loadEntry(MIMETYPEx3GP,"3g2");
+        loadEntry(MIMExTYPEx3GP,"3gp");
+        loadEntry(MIMExTYPEx3GP,"3g2");
         loadEntry("video/dl","dl");
         loadEntry("video/dv","dif");
         loadEntry("video/dv","dv");
@@ -479,16 +479,16 @@ public class MimeUtil
         loadEntry(MIMExTYPExASF,"asf");
         loadEntry(MIMExTYPExASF,"asx");
         loadEntry("video/x-ms-wm","wm");
-        loadEntry(MIMETYPExWMV,"wmv");
+        loadEntry(MIMExTYPExWMV,"wmv");
         loadEntry("video/x-ms-wmx","wmx");
         loadEntry("video/x-ms-wvx","wvx");
-        loadEntry(MIMETYPExAVI,"avi");
-        loadEntry(MIMETYPExMOIVE,"movie");
+        loadEntry(MIMExTYPExAVI,"avi");
+        loadEntry(MIMExTYPExMOIVE,"movie");
         loadEntry("x-conference/x-cooltalk","ice");
         loadEntry("x-epoc/x-sisx-app","sisx");
         loadEntry("application/vnd.apple.mpegurl","m3u8");
-        loadEntry(MIMETYPExRMVB,"rmvb");
-        loadEntry(MIMETYPExRMVB,"rm");
+        loadEntry(MIMExTYPExRMVB,"rmvb");
+        loadEntry(MIMExTYPExRMVB,"rm");
         loadEntry("video/x-matroska","mkv");
         loadEntry("video/x-f4v","f4v");
         loadEntry("audio/aac","aac");
@@ -599,7 +599,7 @@ public class MimeUtil
     {
         if(!StringUtil.isEmptyWithTrim(mimeType))
         {
-            return MIMExTYPExWMA.equalsIgnoreCase(mimeType)||MIMExTYPExREALAUDIO.equalsIgnoreCase(mimeType)||MIMExTYPExWAV.equalsIgnoreCase(mimeType)||MIMETYPExMIDI.equalsIgnoreCase(mimeType)||MIMETYPExAUDIO.equalsIgnoreCase(mimeType);
+            return MIMExTYPExWMA.equalsIgnoreCase(mimeType)||MIMExTYPExREALxAUDIO.equalsIgnoreCase(mimeType)||MIMExTYPExWAV.equalsIgnoreCase(mimeType)||MIMExTYPExMIDI.equalsIgnoreCase(mimeType)||MIMExTYPExAUDIO.equalsIgnoreCase(mimeType);
         }
         return false;
     }

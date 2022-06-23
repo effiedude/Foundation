@@ -13,7 +13,7 @@ import android.view.Gravity;
 import android.widget.Toast;
 
 /******************************************************************************
- * @path Foundation:ToastManager
+ * @path ToastManager
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com
@@ -71,7 +71,6 @@ public class ToastManager
     private void showToastInternal(String content,int duration)
     {
         Toast toast=Toast.makeText(Foundation.getApplication(),content,duration);
-        // 这个Gravity是从原App迁移过来
         toast.setGravity(Gravity.CENTER,0,0);
         lastToastContent=content;
         try

@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import android.os.Looper;
 
 /******************************************************************************
- * @path Foundation:Services
+ * @path Services
  * @describe 服务管理器提供同步和异步两种方式获取服务实例组件可包含多个服务.每个服务通过工厂创建服务实例.启动初始化时需要注册所有服务类和对应的构建工厂
  * @author 张飞
  * @email zhangfei@townspriter.com

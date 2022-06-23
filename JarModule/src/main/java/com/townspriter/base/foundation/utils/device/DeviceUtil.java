@@ -26,7 +26,7 @@ import android.text.TextUtils;
 import android.view.Window;
 
 /******************************************************************************
- * @path Foundation:DeviceUtil
+ * @path DeviceUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

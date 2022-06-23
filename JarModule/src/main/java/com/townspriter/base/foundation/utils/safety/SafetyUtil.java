@@ -3,7 +3,7 @@ package com.townspriter.base.foundation.utils.safety;
 import com.townspriter.base.foundation.utils.lang.AssertUtil;
 
 /******************************************************************************
- * @path Foundation:SafetyUtil
+ * @path SafetyUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

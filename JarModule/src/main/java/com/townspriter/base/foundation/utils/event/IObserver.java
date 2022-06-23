@@ -4,7 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.UiThread;
 
 /******************************************************************************
- * @path Foundation:IObserver
+ * @path IObserver
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

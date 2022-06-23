@@ -4,7 +4,7 @@ import java.io.UnsupportedEncodingException;
 import android.util.Base64;
 
 /******************************************************************************
- * @path Foundation:Base64Util
+ * @path Base64Util
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

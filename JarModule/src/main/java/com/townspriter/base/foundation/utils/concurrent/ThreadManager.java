@@ -26,7 +26,7 @@ import android.os.Process;
 import android.os.SystemClock;
 
 /******************************************************************************
- * @path Foundation:ThreadManager
+ * @path ThreadManager
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com
@@ -620,18 +620,18 @@ public class ThreadManager
     {
         private final Runnable mRunnable;
         private final Integer mType;
-        
+
         public RunnableMap(Runnable runnable,Integer type)
         {
             mRunnable=runnable;
             mType=type;
         }
-        
+
         public Runnable getRunnable()
         {
             return mRunnable;
         }
-        
+
         public int getType()
         {
             return mType;
@@ -645,12 +645,12 @@ public class ThreadManager
         private final Runnable mRunnable;
         private static long mLastExcuteTime;
         private static final long TIME_VALUE=500;
-        
+
         public CustomIdleHandler(Runnable runnable)
         {
             mRunnable=runnable;
         }
-        
+
         private final Runnable mRemoveRunnable=new Runnable()
         {
             @Override
@@ -680,7 +680,7 @@ public class ThreadManager
                 mLastExcuteTime=SystemClock.elapsedRealtime();
             }
         };
-        
+
         @Override
         public boolean queueIdle()
         {
@@ -707,7 +707,7 @@ public class ThreadManager
             }
             return false;
         }
-        
+
         public void post()
         {
             if(mMainThreadQueue!=null)
@@ -725,7 +725,7 @@ public class ThreadManager
             }
         }
     }
-    
+
     /**
      * 向主线程发送一个闲时处理的Runnable.这个Runnable会在主线程空闲的时候进行处理.也就是主线程没有消息要处理的时候进行处理
      *
@@ -744,12 +744,12 @@ public class ThreadManager
     public abstract static class RunnableEx implements Runnable
     {
         private Object mArg;
-        
+
         public void setArg(Object arg)
         {
             mArg=arg;
         }
-        
+
         public Object getArg()
         {
             return mArg;
@@ -760,20 +760,20 @@ public class ThreadManager
         private final int mThreadType;
         private final long mInterval;
         private final Runnable mTask;
-        
+
         public LoopRunnable(int threadType,long interval,Runnable task)
         {
             mThreadType=threadType;
             mInterval=interval;
             mTask=task;
         }
-        
+
         protected void postNextRun()
         {
             postDelayed(mThreadType,this,mInterval);
         }
     }
-    
+
     public static boolean fakeMainLooper(boolean reset)
     {
         if(isMainThread())

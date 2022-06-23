@@ -6,7 +6,7 @@ import android.os.Build;
 import android.text.TextUtils;
 
 /******************************************************************************
- * @path Foundation:RomUtils
+ * @path RomUtils
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com
@@ -16,7 +16,7 @@ import android.text.TextUtils;
  */
 public class RomUtils
 {
-    private static final String TAG=RomUtils.class.getSimpleName();
+    private static final String TAG="RomUtils";
     private static final String ROMxHUAWEI="ro.build.version.emui";
     private static final String ROMxXIAOMI="ro.miui.ui.version.name";
     private static final String ROMxOPPOxVx2="ro.build.version.opporom";

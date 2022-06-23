@@ -5,7 +5,7 @@ import android.os.Handler;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:AnimationDrawableEx
+ * @path AnimationDrawableEx
  * @describe 扩展动画监听器
  * @author 张飞
  * @email zhangfei@townspriter.com

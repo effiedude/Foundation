@@ -4,7 +4,7 @@ import com.townspriter.base.foundation.utils.text.StringUtil;
 import android.os.Looper;
 
 /******************************************************************************
- * @path Foundation:AssertUtil
+ * @path AssertUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

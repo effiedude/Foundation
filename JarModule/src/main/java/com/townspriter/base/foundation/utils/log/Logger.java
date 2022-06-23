@@ -5,7 +5,7 @@ import com.townspriter.base.foundation.utils.text.StringUtil;
 import android.util.Log;
 
 /******************************************************************************
- * @path Foundation:Logger
+ * @path Logger
  * @version 1.0.0.0
  * @describe
  * @author 张飞

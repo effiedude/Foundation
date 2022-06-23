@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import android.os.SystemClock;
 
 /******************************************************************************
- * @path Foundation:SpeedTracker
+ * @path SpeedTracker
  * @describe 可滚动控件滚动速度计算器
  * @author 张飞
  * @email zhangfei@townspriter.com

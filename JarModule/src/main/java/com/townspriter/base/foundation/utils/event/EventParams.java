@@ -6,7 +6,7 @@ import com.townspriter.base.foundation.utils.lang.AssertUtil;
 import android.util.SparseArray;
 
 /******************************************************************************
- * @path Foundation:EventParams
+ * @path EventParams
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

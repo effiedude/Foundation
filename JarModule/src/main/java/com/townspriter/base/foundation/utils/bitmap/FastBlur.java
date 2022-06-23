@@ -3,7 +3,7 @@ package com.townspriter.base.foundation.utils.bitmap;
 import android.graphics.Bitmap;
 
 /******************************************************************************
- * @path Foundation:FastBlur
+ * @path FastBlur
  * @version 1.0.0.0
  * @describe
  * @author 张飞

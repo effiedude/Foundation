@@ -8,13 +8,12 @@ import java.util.Map;
 import com.townspriter.base.foundation.utils.device.StorageUtil;
 import com.townspriter.base.foundation.utils.permission.IPermissionInjectInterface;
 import com.townspriter.base.foundation.utils.permission.PermissionManager;
-
 import android.os.Environment;
 import android.os.IBinder;
 import android.text.TextUtils;
 
 /******************************************************************************
- * @path Foundation:PathManager
+ * @path PathManager
  * @describe 负责获取各种路径
  * @author 张飞
  * @email zhangfei@townspriter.com

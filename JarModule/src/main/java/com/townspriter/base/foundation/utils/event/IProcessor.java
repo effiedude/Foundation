@@ -3,7 +3,7 @@ package com.townspriter.base.foundation.utils.event;
 import androidx.annotation.UiThread;
 
 /******************************************************************************
- * @path Foundation:IProcessor
+ * @path IProcessor
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

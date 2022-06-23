@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.lang;
 /******************************************************************************
- * @path Foundation:Triple
+ * @path Triple
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

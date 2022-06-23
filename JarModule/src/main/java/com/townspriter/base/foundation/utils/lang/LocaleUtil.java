@@ -3,7 +3,7 @@ package com.townspriter.base.foundation.utils.lang;
 import java.util.Locale;
 
 /******************************************************************************
- * @path Foundation:LocaleUtil
+ * @path LocaleUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

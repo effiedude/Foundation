@@ -12,7 +12,7 @@ import android.view.Display;
 import android.view.WindowManager;
 
 /******************************************************************************
- * @path Foundation:DisplayUtil
+ * @path DisplayUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

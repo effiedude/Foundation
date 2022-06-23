@@ -4,7 +4,7 @@ import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
 
 /******************************************************************************
- * @path Foundation:EquatableWeakReference
+ * @path EquatableWeakReference
  * @describe 签名辅助类
  * @author 张飞
  * @email zhangfei@townspriter.com

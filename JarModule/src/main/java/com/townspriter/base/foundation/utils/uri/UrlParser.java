@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 import android.text.TextUtils;
 
 /******************************************************************************
- * @path Foundation:UrlParser
+ * @path UrlParser
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

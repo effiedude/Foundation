@@ -7,7 +7,7 @@ import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 
 /******************************************************************************
- * @path Foundation:LimitedArrayList
+ * @path LimitedArrayList
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

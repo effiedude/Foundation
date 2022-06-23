@@ -5,7 +5,7 @@ import java.util.HashMap;
 import com.townspriter.base.foundation.utils.concurrent.ThreadManager;
 
 /******************************************************************************
- * @path Foundation:DateFormatUtil
+ * @path DateFormatUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

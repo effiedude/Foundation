@@ -3,7 +3,7 @@ package com.townspriter.base.foundation.utils.os;
 import java.lang.reflect.Method;
 
 /******************************************************************************
- * @path Foundation:SystemProperties
+ * @path SystemProperties
  * @describe 反射替代系统类
  * @author 张飞
  * @email zhangfei@townspriter.com

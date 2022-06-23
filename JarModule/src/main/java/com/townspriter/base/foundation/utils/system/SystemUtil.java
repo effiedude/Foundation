@@ -65,7 +65,7 @@ import androidx.annotation.IntRange;
 import androidx.core.app.NotificationManagerCompat;
 
 /******************************************************************************
- * @path Foundation:SystemUtil
+ * @path SystemUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com
@@ -634,12 +634,12 @@ public class SystemUtil
     {
         try
         {
-            String KEY_MIUI_VERSION_NAME="ro.miui.ui.version.name";
+            String KEYxMIUIxVERSIONxNAME="ro.miui.ui.version.name";
             if(mBuildProperties==null)
             {
                 mBuildProperties=BuildProperties.newInstance();
             }
-            String name=mBuildProperties.getProperty(KEY_MIUI_VERSION_NAME,"");
+            String name=mBuildProperties.getProperty(KEYxMIUIxVERSIONxNAME,"");
             return isMiUiVersionNameAbove(6,name);
         }
         catch(IOException ioException)

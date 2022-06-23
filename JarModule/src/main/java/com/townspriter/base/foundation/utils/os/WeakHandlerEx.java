@@ -5,7 +5,7 @@ import android.os.Looper;
 import android.os.Message;
 
 /******************************************************************************
- * @path Foundation:WeakHandlerEx
+ * @path WeakHandlerEx
  * @describe
  * 防止Handler对外应用引发的对外持有引用导致内存泄漏的风险.我们可以选用本类以static形式内部类或独立类文件定义自己的Handler
  * 泛型参数是外部类需要调用的方法

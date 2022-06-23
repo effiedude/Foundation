@@ -5,7 +5,6 @@ import java.lang.reflect.Method;
 import java.util.concurrent.atomic.AtomicInteger;
 import com.townspriter.base.foundation.utils.log.Logger;
 import com.townspriter.base.foundation.utils.system.SystemInfo;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -23,7 +22,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
 /******************************************************************************
- * @path Foundation:ViewUtils
+ * @path ViewUtils
  * @version 1.0.0.0
  * @describe
  * @author 张飞

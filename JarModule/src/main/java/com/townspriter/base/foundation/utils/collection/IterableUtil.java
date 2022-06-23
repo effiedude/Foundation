@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /******************************************************************************
- * @path Foundation:CollectionUtil
+ * @path CollectionUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

@@ -3,7 +3,6 @@ package com.townspriter.base.foundation.utils.media;
 import com.townspriter.base.foundation.utils.log.Logger;
 import com.townspriter.base.foundation.utils.net.URLUtil;
 import com.townspriter.base.foundation.utils.text.StringUtil;
-
 import android.graphics.Bitmap;
 import android.media.MediaMetadataRetriever;
 import android.os.Build;
@@ -12,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:MediaUtils
+ * @path MediaUtils
  * @version 1.0.0.0
  * @describe 多媒体工具类
  * @author 张飞

@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.device;
 /******************************************************************************
- * @path Foundation:LowPerformanceManager
+ * @path LowPerformanceManager
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com
@@ -11,7 +11,7 @@ package com.townspriter.base.foundation.utils.device;
 public class LowPerformanceManager
 {
     private static final int LOWxDEVICExWIDTH=480;
-    private static volatile LowPerformanceManager sLowPerformanceMnager;
+    private static volatile LowPerformanceManager sLowPerformanceManager;
     private Boolean mIsLowMachine;
     private Boolean mIsPoorMachine;
     
@@ -20,17 +20,17 @@ public class LowPerformanceManager
     
     public static LowPerformanceManager getInstance()
     {
-        if(sLowPerformanceMnager==null)
+        if(sLowPerformanceManager ==null)
         {
             synchronized(LowPerformanceManager.class)
             {
-                if(sLowPerformanceMnager==null)
+                if(sLowPerformanceManager ==null)
                 {
-                    sLowPerformanceMnager=new LowPerformanceManager();
+                    sLowPerformanceManager =new LowPerformanceManager();
                 }
             }
         }
-        return sLowPerformanceMnager;
+        return sLowPerformanceManager;
     }
     
     /** 判断低端机 */

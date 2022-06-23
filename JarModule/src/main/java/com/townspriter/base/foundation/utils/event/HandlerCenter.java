@@ -5,7 +5,7 @@ import java.util.List;
 import androidx.annotation.UiThread;
 
 /******************************************************************************
- * @path Foundation:HandlerCenter
+ * @path HandlerCenter
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

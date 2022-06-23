@@ -4,7 +4,7 @@ import java.io.IOException;
 import android.text.TextUtils;
 
 /******************************************************************************
- * @path Foundation:PhoneType
+ * @path PhoneType
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

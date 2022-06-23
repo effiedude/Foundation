@@ -11,7 +11,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 
 /******************************************************************************
- * @path Foundation:SystemInfo
+ * @path SystemInfo
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

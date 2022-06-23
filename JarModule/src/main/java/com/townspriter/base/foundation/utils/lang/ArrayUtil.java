@@ -6,7 +6,7 @@ import java.util.List;
 import com.townspriter.base.foundation.utils.collection.Predicate;
 
 /******************************************************************************
- * @path Foundation:ArrayUtil
+ * @path ArrayUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

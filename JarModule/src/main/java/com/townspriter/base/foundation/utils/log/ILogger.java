@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.log;
 /******************************************************************************
- * @path Foundation:ILogger
+ * @path ILogger
  * @version 1.0.0.0
  * @describe
  * @author 张飞

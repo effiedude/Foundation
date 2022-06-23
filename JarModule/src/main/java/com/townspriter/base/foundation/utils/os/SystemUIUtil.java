@@ -4,7 +4,7 @@ import com.townspriter.base.foundation.Foundation;
 import com.townspriter.base.foundation.utils.lang.AssertUtil;
 
 /******************************************************************************
- * @path Foundation:SystemUIUtil
+ * @path SystemUIUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

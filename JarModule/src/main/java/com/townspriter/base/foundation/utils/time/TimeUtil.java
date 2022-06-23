@@ -14,7 +14,7 @@ import android.os.SystemClock;
 import androidx.annotation.NonNull;
 
 /******************************************************************************
- * @path Foundation:TimeUtil
+ * @path TimeUtil
  * @version 1.0.0.0
  * @describe
  * @author 张飞

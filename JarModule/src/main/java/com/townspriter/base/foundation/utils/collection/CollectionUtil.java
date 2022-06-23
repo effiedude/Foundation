@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Map;
 
 /******************************************************************************
- * @path Foundation:CollectionUtil
+ * @path CollectionUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 import com.townspriter.base.foundation.utils.log.Logger;
 
 /******************************************************************************
- * @path Foundation:ReflectionHelper
+ * @path ReflectionHelper
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

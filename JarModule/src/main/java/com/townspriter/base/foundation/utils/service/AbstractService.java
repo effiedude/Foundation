@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.service;
 /******************************************************************************
- * @path Foundation:AbstractService
+ * @path AbstractService
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

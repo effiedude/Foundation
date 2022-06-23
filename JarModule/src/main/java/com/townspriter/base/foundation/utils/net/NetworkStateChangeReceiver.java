@@ -11,7 +11,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 
 /******************************************************************************
- * @path Foundation:NetworkStateChangeReceiver
+ * @path NetworkStateChangeReceiver
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com
@@ -70,7 +70,7 @@ public class NetworkStateChangeReceiver extends BroadcastReceiver
                     args.mCurrAccessPointType=NetworkUtil.getCurrAccessPointType();
                     args.mCurrentIAPName=SystemHelper.getInstance().getCurrentIAPName();
                     args.mIsMobileNetwork=NetworkUtil.isMobileNetwork();
-                    args.mIsWifi=NetworkUtil.isWifiNetwork();
+                    args.mIsWifi=NetworkUtil.isWiFiNetwork();
                     args.mAccessPointName=NetworkUtil.getAccessPointName();
                 }
             },new Runnable()
@@ -94,7 +94,7 @@ public class NetworkStateChangeReceiver extends BroadcastReceiver
         if(isConnected)
         {
             int type=NetworkUtil.getCurrAccessPointType();
-            isWifi=(type==NetworkUtil.NETWORK_AP_TYPE_WIFI);
+            isWifi=(type==NetworkUtil.NETWORKxAPxTYPExWIFI);
             isAbove4G=NetworkUtil.is4GAboveNetwork();
         }
         synchronized(mListeners)

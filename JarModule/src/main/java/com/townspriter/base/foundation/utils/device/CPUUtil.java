@@ -16,7 +16,7 @@ import android.os.Build.VERSION;
 import android.text.TextUtils;
 
 /******************************************************************************
- * @path Foundation:CPUUtil
+ * @path CPUUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

@@ -6,7 +6,7 @@ import android.content.pm.PackageManager;
 import androidx.core.app.ActivityCompat;
 
 /******************************************************************************
- * @path Foundation:PermissionUtil
+ * @path PermissionUtil
  * @version 1.0.0.0
  * @describe 权限申请工具类
  * @author 张飞

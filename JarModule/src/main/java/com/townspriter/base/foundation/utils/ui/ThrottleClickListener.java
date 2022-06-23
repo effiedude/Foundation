@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 /******************************************************************************
- * @path Foundation:ThrottleClickListener
+ * @path ThrottleClickListener
  * @describe 防止频繁点击
  * @author 张飞
  * @email zhangfei@townspriter.com

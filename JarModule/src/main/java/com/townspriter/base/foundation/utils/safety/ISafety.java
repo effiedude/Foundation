@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.safety;
 /******************************************************************************
- * @path Foundation:ISafety
+ * @path ISafety
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

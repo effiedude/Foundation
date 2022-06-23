@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.app;
 /******************************************************************************
- * @path Foundation:ConfigManager
+ * @path ConfigManager
  * @version 1.0.0.0
  * @describe
  * @author 张飞
@@ -12,8 +12,8 @@ package com.townspriter.base.foundation.utils.app;
 public class ConfigManager
 {
     private static final String TAG="ConfigManager";
-    private static final String NORMAL_STUDENT_ID="1266";
-    private static final String NORMAL_STUDENT_NAME="布鲁克";
+    private static final String NORMALxSTUDENTxID ="1266";
+    private static final String NORMALxSTUDENTxNAME ="布鲁克";
     private String mStudentID;
     /** 测试账号信息 */
     private String mStudentName;
@@ -32,8 +32,8 @@ public class ConfigManager
     
     private ConfigManager()
     {
-        mStudentID=NORMAL_STUDENT_ID;
-        mStudentName=NORMAL_STUDENT_NAME;
+        mStudentID= NORMALxSTUDENTxID;
+        mStudentName= NORMALxSTUDENTxNAME;
     }
     
     public static ConfigManager getInstance()

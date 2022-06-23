@@ -10,7 +10,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 
 /******************************************************************************
- * @path Foundation:SystemHelper
+ * @path SystemHelper
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com
@@ -50,7 +50,7 @@ public class SystemHelper
             int netType=info.getType();
             if(netType==ConnectivityManager.TYPE_WIFI)
             {
-                return NetworkUtil.NETWORK_TYPE_WIFI;
+                return NetworkUtil.NETWORKxTYPExWIFI;
             }
             else if(netType==ConnectivityManager.TYPE_MOBILE)
             {

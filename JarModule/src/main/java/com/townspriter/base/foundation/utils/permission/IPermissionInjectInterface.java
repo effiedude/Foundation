@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.permission;
 /******************************************************************************
- * @path Foundation:IPermissionInjectInterface
+ * @path IPermissionInjectInterface
  * @version 1.0.0.0
  * @describe 权限注入接口类
  * @author 张飞

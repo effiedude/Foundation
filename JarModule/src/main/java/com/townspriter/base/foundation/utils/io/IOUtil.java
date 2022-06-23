@@ -19,7 +19,7 @@ import com.townspriter.base.foundation.utils.lang.AssertUtil;
 import android.database.Cursor;
 
 /******************************************************************************
- * @path Foundation:IOUtil
+ * @path IOUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

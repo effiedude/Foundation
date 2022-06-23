@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.net;
 /******************************************************************************
- * @path Foundation:HTMLUtil
+ * @path HTMLUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

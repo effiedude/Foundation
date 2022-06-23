@@ -3,7 +3,7 @@ package com.townspriter.base.foundation.utils.lang;
 import com.townspriter.base.foundation.utils.concurrent.ThreadManager;
 
 /******************************************************************************
- * @path Foundation:GCUtil
+ * @path GCUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

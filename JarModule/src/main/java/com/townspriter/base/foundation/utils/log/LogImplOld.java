@@ -3,7 +3,7 @@ package com.townspriter.base.foundation.utils.log;
 import android.util.Log;
 
 /******************************************************************************
- * @path Foundation:LogImplOld
+ * @path LogImplOld
  * @version 1.0.0.0
  * @describe
  * @author 张飞

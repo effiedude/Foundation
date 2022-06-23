@@ -10,7 +10,7 @@ import android.app.Application;
 import androidx.annotation.IntDef;
 
 /******************************************************************************
- * @path Foundation:Foundation
+ * @path Foundation
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com
@@ -95,7 +95,7 @@ public class Foundation
     }
     
     /**
-     * 区分线上线下.这里我们暂时区分线上和线下
+     * 区分线上线下(这里我们暂时区分线上和线下)
      * 线上-主要是摩天轮打出来的包
      * 线下-就是开发者本地构建包
      */

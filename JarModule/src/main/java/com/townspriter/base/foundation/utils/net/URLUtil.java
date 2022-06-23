@@ -12,17 +12,20 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
+
 import com.townspriter.base.foundation.utils.lang.AssertUtil;
 import com.townspriter.base.foundation.utils.lang.NumberUtil;
 import com.townspriter.base.foundation.utils.net.mime.MimeUtil;
 import com.townspriter.base.foundation.utils.text.StringUtil;
+
 import android.net.Uri;
 import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:URLUtil
+ * @path URLUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

@@ -3,7 +3,7 @@ package com.townspriter.base.foundation.utils.lang;
 import com.townspriter.base.foundation.utils.text.StringUtil;
 
 /******************************************************************************
- * @path Foundation:NumberUtil
+ * @path NumberUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

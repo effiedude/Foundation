@@ -12,7 +12,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.text.TextUtils;
 
 /******************************************************************************
- * @path Foundation:VersionUtil
+ * @path VersionUtil
  * @describe 只能主进程使用
  * @author 张飞
  * @email zhangfei@townspriter.com

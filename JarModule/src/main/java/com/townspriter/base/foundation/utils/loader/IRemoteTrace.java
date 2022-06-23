@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.loader;
 /******************************************************************************
- * @path Foundation:IRemoteTrace
+ * @path IRemoteTrace
  * @describe 远程日志注入接口
  * @author 张飞
  * @email zhangfei@townspriter.com

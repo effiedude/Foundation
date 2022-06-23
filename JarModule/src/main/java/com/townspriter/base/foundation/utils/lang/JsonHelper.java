@@ -6,7 +6,7 @@ import org.json.JSONObject;
 import com.townspriter.base.foundation.utils.text.StringUtil;
 
 /******************************************************************************
- * @path Foundation:JsonHelper
+ * @path JsonHelper
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

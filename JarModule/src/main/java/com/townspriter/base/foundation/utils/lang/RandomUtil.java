@@ -4,7 +4,7 @@ import java.util.Random;
 import androidx.annotation.IntRange;
 
 /******************************************************************************
- * @path Foundation:RandomUtil
+ * @path RandomUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

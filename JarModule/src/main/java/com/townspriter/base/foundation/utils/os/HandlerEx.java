@@ -5,7 +5,7 @@ import android.os.Looper;
 import android.os.Message;
 
 /******************************************************************************
- * @path Foundation:HandlerEx
+ * @path HandlerEx
  * @describe 签名辅助类
  * @author 张飞
  * @email zhangfei@townspriter.com

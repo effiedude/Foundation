@@ -22,7 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:StatusBarUtils
+ * @path StatusBarUtils
  * @describe 状态栏的配置工具类.主要处理沉浸状态栏的相关逻辑
  * @author 张飞
  * @email zhangfei@townspriter.com
@@ -43,8 +43,6 @@ public class StatusBarUtils
      * @function isSupportTransparentStatusBar
      * @since JDK 1.7.0-79
      * @describe 检测当前系统是否支持透明系统栏
-     * @param
-     * @exception
      * @return
      * boolean <code>true:支持 false:不支持</code>
      * @date 2021-07-19 11:49:04
@@ -95,10 +93,6 @@ public class StatusBarUtils
     
     public static void updateColorStatusBar(@NonNull Activity activity,boolean dark,int color)
     {
-        if(activity==null)
-        {
-            return;
-        }
         if(isStandardStatusBarAboveM())
         {
             setDarkStatusIcon(activity.getWindow(),dark);
@@ -165,10 +159,6 @@ public class StatusBarUtils
     @TargetApi(VERSION_CODES.KITKAT)
     public static void configTransparentStatusBar(@NonNull Window window)
     {
-        if(window==null)
-        {
-            return;
-        }
         if(VERSION.SDK_INT<SystemUtil.BUILDxOSxVERSIONxM||SystemUtil.isMiUIV7OrAbove()||SystemUtil.isFlymeAboveM())
         {
             window.setFlags(LayoutParams.FLAG_TRANSLUCENT_STATUS,LayoutParams.FLAG_TRANSLUCENT_STATUS);

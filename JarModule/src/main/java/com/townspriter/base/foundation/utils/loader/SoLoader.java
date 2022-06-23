@@ -26,7 +26,7 @@ import android.text.TextUtils;
 import androidx.annotation.NonNull;
 
 /******************************************************************************
- * @path Foundation:SoLoader
+ * @path SoLoader
  * @describe 加载指定目录的库文件
  * 提供两种方法加载库文件
  * 方法一:加压安装目录下的安装包.获取库文件然后加载

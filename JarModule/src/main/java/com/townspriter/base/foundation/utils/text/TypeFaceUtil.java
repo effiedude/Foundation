@@ -6,7 +6,7 @@ import android.graphics.Typeface;
 import androidx.annotation.NonNull;
 
 /******************************************************************************
- * @path Foundation:TypeFaceUtil
+ * @path TypeFaceUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

@@ -21,7 +21,7 @@ import com.townspriter.base.foundation.utils.io.IOUtil;
 import com.townspriter.base.foundation.utils.text.StringUtil;
 
 /******************************************************************************
- * @path Foundation:ZipUtil
+ * @path ZipUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

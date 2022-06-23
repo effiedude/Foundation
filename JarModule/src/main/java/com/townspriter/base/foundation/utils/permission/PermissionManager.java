@@ -3,7 +3,7 @@ package com.townspriter.base.foundation.utils.permission;
 import androidx.annotation.NonNull;
 
 /******************************************************************************
- * @path Foundation:PermissionManager
+ * @path PermissionManager
  * @version 1.0.0.0
  * @describe
  * @author 张飞

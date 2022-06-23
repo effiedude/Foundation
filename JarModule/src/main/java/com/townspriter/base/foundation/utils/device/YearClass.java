@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /******************************************************************************
- * @path Foundation:YearClass
+ * @path YearClass
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.lifecycle;
 /******************************************************************************
- * @path Foundation:AppStateListener
+ * @path AppStateListener
  * @describe 当应用进入前后台以后触发此监听函数
  * @author 张飞
  * @email zhangfei@townspriter.com

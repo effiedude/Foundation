@@ -3,7 +3,7 @@ package com.townspriter.base.foundation.utils.service;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:IServiceFactory
+ * @path IServiceFactory
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

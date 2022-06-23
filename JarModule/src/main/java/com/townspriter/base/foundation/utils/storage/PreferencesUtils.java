@@ -11,7 +11,7 @@ import android.content.SharedPreferences;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:PreferencesUtils
+ * @path PreferencesUtils
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

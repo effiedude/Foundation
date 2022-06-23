@@ -1,7 +1,11 @@
 package com.townspriter.android.template;
 
 import com.townspriter.base.foundation.utils.log.Logger;
+import com.townspriter.base.foundation.utils.system.SystemInfo;
+
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 /******************************************************************************
@@ -29,7 +33,10 @@ public class MainActivity extends AppCompatActivity
     
     private void initData()
     {
-        Logger.d(TAG,"initData");
+        Logger.d(TAG,"initData-SystemInfo.INSTANCE.getDensity():"+SystemInfo.INSTANCE.getDensity());
+        Logger.d(TAG,"initData-SystemInfo.INSTANCE.getDensityDpi():"+SystemInfo.INSTANCE.getDensityDpi());
+        Logger.d(TAG,"initData-SystemInfo.INSTANCE.getDeviceWidth():"+SystemInfo.INSTANCE.getDeviceWidth(null));
+        Logger.d(TAG,"initData-SystemInfo.INSTANCE.getDeviceHeight():"+SystemInfo.INSTANCE.getDeviceHeight(null));
     }
     
     private void initView()

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /******************************************************************************
- * @path Foundation:FileTypeJudge
+ * @path FileTypeJudge
  * @describe 文件类型判断类
  * @author 张飞
  * @email zhangfei@townspriter.com

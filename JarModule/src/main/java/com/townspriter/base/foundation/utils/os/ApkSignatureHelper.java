@@ -6,7 +6,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 
 /******************************************************************************
- * @path Foundation:ApkSignatureHelper
+ * @path ApkSignatureHelper
  * @describe 签名辅助类
  * @author 张飞
  * @email zhangfei@townspriter.com

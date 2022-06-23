@@ -7,7 +7,7 @@ import java.util.zip.InflaterInputStream;
 import com.townspriter.base.foundation.utils.io.IOUtil;
 
 /******************************************************************************
- * @path Foundation:DeflateUtil
+ * @path DeflateUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

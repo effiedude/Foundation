@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.collection;
 /******************************************************************************
- * @path Foundation:Predicate
+ * @path Predicate
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

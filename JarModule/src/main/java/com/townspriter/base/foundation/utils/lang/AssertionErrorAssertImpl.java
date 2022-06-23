@@ -5,7 +5,7 @@ import com.townspriter.base.foundation.utils.lang.AssertUtil.IAssert;
 import android.util.Log;
 
 /******************************************************************************
- * @path Foundation:AssertionErrorAssertImpl
+ * @path AssertionErrorAssertImpl
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

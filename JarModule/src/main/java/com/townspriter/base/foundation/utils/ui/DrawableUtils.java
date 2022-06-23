@@ -23,7 +23,7 @@ import androidx.annotation.ColorRes;
 import androidx.core.graphics.drawable.DrawableCompat;
 
 /******************************************************************************
- * @path Foundation:DrawableUtils
+ * @path DrawableUtils
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

@@ -13,7 +13,7 @@ import android.app.ActivityManager.MemoryInfo;
 import android.text.TextUtils;
 
 /******************************************************************************
- * @path Foundation:MemoryUtil
+ * @path MemoryUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

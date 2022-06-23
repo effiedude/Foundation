@@ -42,7 +42,7 @@ import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 
 /******************************************************************************
- * @path Foundation:FileUtils
+ * @path FileUtils
  * @version 1.0.0.0
  * @describe
  * @author 张飞

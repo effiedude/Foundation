@@ -11,7 +11,6 @@ import com.townspriter.base.foundation.Foundation;
 import com.townspriter.base.foundation.utils.device.DisplayUtil;
 import com.townspriter.base.foundation.utils.io.PathUtil;
 import com.townspriter.base.foundation.utils.lang.AssertUtil;
-
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.content.res.Resources.NotFoundException;
@@ -31,7 +30,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RawRes;
 
 /******************************************************************************
- * @path Foundation:ResHelper
+ * @path ResHelper
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

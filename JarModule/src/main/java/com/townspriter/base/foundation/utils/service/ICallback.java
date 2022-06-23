@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.service;
 /******************************************************************************
- * @path Foundation:ICallback
+ * @path ICallback
  * @describe 异步回调接口
  * @author 张飞
  * @email zhangfei@townspriter.com

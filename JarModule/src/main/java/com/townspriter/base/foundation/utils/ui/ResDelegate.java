@@ -7,7 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RawRes;
 
 /******************************************************************************
- * @path Foundation:ResDelegate
+ * @path ResDelegate
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

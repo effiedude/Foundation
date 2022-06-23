@@ -6,7 +6,7 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 
 /******************************************************************************
- * @path Foundation:ThrottleListItemClickListener
+ * @path ThrottleListItemClickListener
  * @describe 防止列表子控件频繁重复点击
  * @author 张飞
  * @email zhangfei@townspriter.com

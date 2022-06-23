@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.device;
 /******************************************************************************
- * @path Foundation:DeviceConst
+ * @path DeviceConst
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

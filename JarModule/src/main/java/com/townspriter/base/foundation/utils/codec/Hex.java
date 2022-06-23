@@ -1,6 +1,6 @@
 package com.townspriter.base.foundation.utils.codec;
 /******************************************************************************
- * @path Foundation:Hex
+ * @path Hex
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com
@@ -10,8 +10,8 @@ package com.townspriter.base.foundation.utils.codec;
  */
 public class Hex
 {
-    private static final char[] DIGITS_LOWER={'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};
-    private static final char[] DIGITS_UPPER={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+    private static final char[] DIGITSxLOWER ={'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};
+    private static final char[] DIGITSxUPPER ={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
     
     public static char[] encodeHex(byte[] data)
     {
@@ -20,7 +20,7 @@ public class Hex
     
     public static char[] encodeHex(byte[] data,boolean toLowerCase)
     {
-        return encodeHex(data,toLowerCase?DIGITS_LOWER:DIGITS_UPPER);
+        return encodeHex(data,toLowerCase? DIGITSxLOWER : DIGITSxUPPER);
     }
     
     private static char[] encodeHex(byte[] data,char[] toDigits)

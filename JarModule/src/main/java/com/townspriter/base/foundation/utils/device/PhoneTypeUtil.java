@@ -16,7 +16,7 @@ import android.os.Environment;
 import android.text.TextUtils;
 
 /******************************************************************************
- * @path Foundation:PhoneTypeUtil
+ * @path PhoneTypeUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

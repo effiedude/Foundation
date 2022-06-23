@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Build.VERSION;
 
 /******************************************************************************
- * @path Foundation:MobileInfo
+ * @path MobileInfo
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

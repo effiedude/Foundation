@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 /******************************************************************************
- * @path Foundation:AppLifeCycleMonitor
+ * @path AppLifeCycleMonitor
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

@@ -8,7 +8,7 @@ import java.io.InputStream;
 import java.security.MessageDigest;
 
 /******************************************************************************
- * @path Foundation:MD5Utils
+ * @path MD5Utils
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

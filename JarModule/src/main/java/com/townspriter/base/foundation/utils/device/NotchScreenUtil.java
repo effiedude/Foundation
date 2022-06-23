@@ -6,7 +6,7 @@ import android.content.Context;
 import android.os.Build;
 
 /******************************************************************************
- * @path Foundation:NotchScreenUtil
+ * @path NotchScreenUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com

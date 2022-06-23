@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import androidx.annotation.NonNull;
 
 /******************************************************************************
- * @path Foundation:PathUtil
+ * @path PathUtil
  * @describe
  * @author 张飞
  * @email zhangfei@townspriter.com
